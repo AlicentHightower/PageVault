@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <style>
+    /* General styles */
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif; /* Modern and elegant font */
+    }
+    nav {
+      background-color: #001f3f; /* Dark blue background */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .menu-icon {
+      height: 24px;
+      cursor: pointer;
+    }
+
+    /* Search bar styling */
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #003366; /* Slightly lighter blue */
+      padding: 12px 20px;
+      border-radius: 20px;
+      flex-grow: 1;
+      max-width: 450px; /* Limits the search bar length */
+      margin: 0 20px; /* Centers the search bar */
+    }
+    .search-bar input {
+      border: none;
+      outline: none;
+      background: transparent;
+      color: white;
+      font-size: 16px;
+      width: 100%; /* Allows input to fill the bar */
+      font-family: inherit;
+    }
+    .search-bar input::placeholder {
+      color: #b0c4de; /* Lighter placeholder text */
+    }
+    .search-bar img {
+      height: 22px;
+    }
+
+    /* User icon section */
+    .user-icon img {
+      height: 30px;
+      cursor: pointer;
+    }
+
+    /* Responsive adjustments */
+    @media (min-width: 768px) {
+      nav {
+        flex-direction: row;
+        height: 80px;
+      }
+      .menu {
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <!-- Left: Menu Icon and Brand Name -->
+  <div class="menu">
+    <div class="brand">
+      <img src="photos/page.vault.png" alt="Menu Icon" class="menu-icon">
+    </div>
+
+    <!-- Middle: Centered Search Bar -->
+    <div class="search-bar">
+      <input type="text" placeholder="Kërko këtu...">
+      <img src="icons/books-svgrepo-com (3).svg" alt="Search Icon">
+    </div>
+
+    <!-- Right: User Icon -->
+    <div class="user-icon">
+      <img src="icons/user (2).svg" alt="User Icon">
+    </div>
+  </div>
+</nav>
+
+</body>
+</html>
