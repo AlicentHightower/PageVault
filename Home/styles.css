@@ -1,0 +1,67 @@
+html, body {
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box; /* Ensure padding and borders don't exceed element width */
+}
+
+.background {
+    background: url('Books.jpg') no-repeat center center fixed;
+    background-size: cover; 
+    min-height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%; /* Ensure it spans the full width */
+}
+
+.form-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.book-list {
+    margin-top: 20px;
+}
+
+.book-list h2 {
+    margin-bottom: 20px;
+    color: #ffcc00; 
+}
+
+.book {
+    padding: 15px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.book:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.book h3 {
+    margin: 5px 0;
+    color: #ffcc00;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    width: 100%; /* Ensure it spans the full width */
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Prevent padding from exceeding width */
+}
