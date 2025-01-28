@@ -4,12 +4,6 @@ include 'db.php';
 $sql = "SELECT id, title, author, cover_image FROM books";
 $result = $conn->query($sql);
 ?>
-<?php
-include 'db.php';
-
-$sql = "SELECT id, title, author, cover_image FROM books";
-$result = $conn->query($sql);
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,21 +23,21 @@ $result = $conn->query($sql);
         <div class="slider">
             <div class="slides">
                 <div class="slide">
-                    <img src="http://localhost/PROJEKTI%20I%20GRETES/PageVault/Home/img/slider1.png" alt="Discover New Worlds">
+                    <img src="./img/slider1.png" alt="Discover New Worlds">
                     <div class="slide-text">
                         <h2>Discover New Worlds</h2>
                         <p>Explore our collection of thrilling books.</p>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="http://localhost/PROJEKTI%20I%20GRETES/PageVault/Home/img/slider2.png" alt="Read Anywhere">
+                    <img src="./img/slider2.png" alt="Read Anywhere">
                     <div class="slide-text">
                         <h2>Read Anywhere</h2>
                         <p>Find your next adventure, anytime, anywhere.</p>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="http://localhost/PROJEKTI%20I%20GRETES/PageVault/Home/img/slider3.png" alt="Timeless Classics">
+                    <img src="./img/slider3.png" alt="Timeless Classics">
                     <div class="slide-text">
                         <h2>Timeless Classics</h2>
                         <p>Dive into books that have stood the test of time.</p>
@@ -104,7 +98,7 @@ $result = $conn->query($sql);
                     </div>
                 </div>
             </div>
-            <p class="footer-tagline">© 2025 Page Vault - Your gateway to exploring the world of books!</p>
+            <p class="footer-tagline">&copy; 2025 Page Vault - Your gateway to exploring the world of books!</p>
         </footer>
     </div>
     <script>
