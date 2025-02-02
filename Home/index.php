@@ -20,24 +20,45 @@ $result = $conn->query($sql);
             <p>Your gateway to exploring the world of books!</p>
         </header>
 
+      
+        <nav style="display: flex; justify-content: flex-start; background-color: #6a4f4b; padding: 20px 40px; width: 100%; margin-bottom: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 40px; align-items: center;">
+                <li style="display: inline;">
+                    <a href="../Checkout/checkout.html" style="color: #ffd9b5; text-decoration: none; font-size: 22px; font-weight: bold; padding: 16px 40px; border-radius: 5px; background-color: #6a4f4b; transition: background-color 0.3s ease, color 0.3s ease;">
+                        Checkout
+                    </a>
+                </li>
+                <li style="display: inline;">
+                    <a href="../Contact%20us/contact.html" style="color: #ffd9b5; text-decoration: none; font-size: 22px; font-weight: bold; padding: 16px 40px; border-radius: 5px; background-color: #6a4f4b; transition: background-color 0.3s ease, color 0.3s ease;">
+                        Contact Us
+                    </a>
+                </li>
+                <li style="display: inline;">
+                    <a href="../Login%20and%20Register/index.html" style="color: #ffd9b5; text-decoration: none; font-size: 22px; font-weight: bold; padding: 16px 40px; border-radius: 5px; background-color: #6a4f4b; transition: background-color 0.3s ease, color 0.3s ease;">
+                        Login / Sign In
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
         <div class="slider">
             <div class="slides">
                 <div class="slide">
-                    <img src="./img/slider1.png" alt="Discover New Worlds">
+                    <img src="http://localhost/PROJEKTI%20I%20GRETES/PageVault/Home/img/slider1.png" alt="Discover New Worlds">
                     <div class="slide-text">
                         <h2>Discover New Worlds</h2>
                         <p>Explore our collection of thrilling books.</p>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="./img/slider2.png" alt="Read Anywhere">
+                    <img src="http://localhost/PROJEKTI%20I%20GRETES/PageVault/Home/img/slider2.png" alt="Read Anywhere">
                     <div class="slide-text">
                         <h2>Read Anywhere</h2>
                         <p>Find your next adventure, anytime, anywhere.</p>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="./img/slider3.png" alt="Timeless Classics">
+                    <img src="http://localhost/PROJEKTI%20I%20GRETES/PageVault/Home/img/slider3.png" alt="Timeless Classics">
                     <div class="slide-text">
                         <h2>Timeless Classics</h2>
                         <p>Dive into books that have stood the test of time.</p>
@@ -56,8 +77,8 @@ $result = $conn->query($sql);
             <div class="book-list">
                 <?php if ($result->num_rows > 0): ?>
                     <?php while ($row = $result->fetch_assoc()): ?>
-                        <a href="books.php?id=<?= $row['id'] ?>" class="book">
-                            <img src="placeholder.jpg" alt="<?= htmlspecialchars($row['title']) ?>">
+                        <a href="books.php?id=<?= htmlspecialchars($row['id']) ?>" class="book">
+                            <img src="<?= htmlspecialchars($row['cover_image'] ?: 'placeholder.jpg') ?>" alt="<?= htmlspecialchars($row['title']) ?>">
                             <h3><?= htmlspecialchars($row['title']) ?></h3>
                             <p>by <?= htmlspecialchars($row['author']) ?></p>
                         </a>
@@ -98,9 +119,10 @@ $result = $conn->query($sql);
                     </div>
                 </div>
             </div>
-            <p class="footer-tagline">&copy; 2025 Page Vault - Your gateway to exploring the world of books!</p>
+            <p class="footer-tagline">© 2025 Page Vault - Your gateway to exploring the world of books!</p>
         </footer>
     </div>
+
     <script>
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
